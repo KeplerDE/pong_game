@@ -21,8 +21,13 @@ screen.onkey(r_paddle.go_down, "Down")
 screen.onkey(l_paddle.go_up, "w")
 screen.onkey(l_paddle.go_down, "s")
 
+
+"""The code sets up event listeners for keyboard input to move the paddles up and down, and uses a while loop to 
+continuously update the screen and move the ball."""
+
 game_is_on = True
 while game_is_on:
+    time.sleep(ball.move_speed)              # to set speed
     screen.update()
     ball.move()
 
